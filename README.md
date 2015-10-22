@@ -44,5 +44,6 @@ let safeArray = Monitor(bridgeFromValue: [1, 2, 3])
 safeArray.acquire { array in
     // Safetly modify array
 }
+```
 
 If you're looking for a more versitile concurrency mechansim, `Semaphore` is a very light abstraction over `dispatch_semamphore_t`, and it can be used to implement a wide variety of new structures.
