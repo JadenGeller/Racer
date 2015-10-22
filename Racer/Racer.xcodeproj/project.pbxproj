@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D8143E31BD8650B006121AA /* Racer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8143D81BD8650B006121AA /* Racer.framework */; settings = {ASSET_TAGS = (); }; };
+		4D8143F71BD86524006121AA /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F21BD86524006121AA /* Dispatcher.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8143F81BD86524006121AA /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F31BD86524006121AA /* Monitor.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8143F91BD86524006121AA /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F41BD86524006121AA /* Mutex.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8143FA1BD86524006121AA /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F51BD86524006121AA /* Semaphore.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8143FB1BD86524006121AA /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F61BD86524006121AA /* ThreadLocal.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8143FF1BD86539006121AA /* RacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143FE1BD86539006121AA /* RacerTests.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D8143E41BD8650B006121AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D8143CF1BD8650B006121AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D8143D71BD8650B006121AA;
+			remoteInfo = Racer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D8143D81BD8650B006121AA /* Racer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Racer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8143DD1BD8650B006121AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8143E21BD8650B006121AA /* RacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8143E91BD8650B006121AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8143F21BD86524006121AA /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		4D8143F31BD86524006121AA /* Monitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
+		4D8143F41BD86524006121AA /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
+		4D8143F51BD86524006121AA /* Semaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
+		4D8143F61BD86524006121AA /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
+		4D8143FE1BD86539006121AA /* RacerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D8143D41BD8650B006121AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8143DF1BD8650B006121AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8143E31BD8650B006121AA /* Racer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D8143CE1BD8650B006121AA = {
+			isa = PBXGroup;
+			children = (
+				4D8143DA1BD8650B006121AA /* Racer */,
+				4D8143E61BD8650B006121AA /* RacerTests */,
+				4D8143D91BD8650B006121AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D8143D91BD8650B006121AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D8143D81BD8650B006121AA /* Racer.framework */,
+				4D8143E21BD8650B006121AA /* RacerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D8143DA1BD8650B006121AA /* Racer */ = {
+			isa = PBXGroup;
+			children = (
+				4D8143F21BD86524006121AA /* Dispatcher.swift */,
+				4D8143F31BD86524006121AA /* Monitor.swift */,
+				4D8143F41BD86524006121AA /* Mutex.swift */,
+				4D8143F51BD86524006121AA /* Semaphore.swift */,
+				4D8143F61BD86524006121AA /* ThreadLocal.swift */,
+				4D8143DD1BD8650B006121AA /* Info.plist */,
+			);
+			path = Racer;
+			sourceTree = "<group>";
+		};
+		4D8143E61BD8650B006121AA /* RacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D8143FE1BD86539006121AA /* RacerTests.swift */,
+				4D8143E91BD8650B006121AA /* Info.plist */,
+			);
+			path = RacerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D8143D51BD8650B006121AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D8143D71BD8650B006121AA /* Racer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8143EC1BD8650B006121AA /* Build configuration list for PBXNativeTarget "Racer" */;
+			buildPhases = (
+				4D8143D31BD8650B006121AA /* Sources */,
+				4D8143D41BD8650B006121AA /* Frameworks */,
+				4D8143D51BD8650B006121AA /* Headers */,
+				4D8143D61BD8650B006121AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Racer;
+			productName = Racer;
+			productReference = 4D8143D81BD8650B006121AA /* Racer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D8143E11BD8650B006121AA /* RacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8143EF1BD8650B006121AA /* Build configuration list for PBXNativeTarget "RacerTests" */;
+			buildPhases = (
+				4D8143DE1BD8650B006121AA /* Sources */,
+				4D8143DF1BD8650B006121AA /* Frameworks */,
+				4D8143E01BD8650B006121AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D8143E51BD8650B006121AA /* PBXTargetDependency */,
+			);
+			name = RacerTests;
+			productName = RacerTests;
+			productReference = 4D8143E21BD8650B006121AA /* RacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D8143CF1BD8650B006121AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jaden Geller";
+				TargetAttributes = {
+					4D8143D71BD8650B006121AA = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					4D8143E11BD8650B006121AA = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 4D8143D21BD8650B006121AA /* Build configuration list for PBXProject "Racer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4D8143CE1BD8650B006121AA;
+			productRefGroup = 4D8143D91BD8650B006121AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D8143D71BD8650B006121AA /* Racer */,
+				4D8143E11BD8650B006121AA /* RacerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D8143D61BD8650B006121AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8143E01BD8650B006121AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D8143D31BD8650B006121AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8143F81BD86524006121AA /* Monitor.swift in Sources */,
+				4D8143F71BD86524006121AA /* Dispatcher.swift in Sources */,
+				4D8143FB1BD86524006121AA /* ThreadLocal.swift in Sources */,
+				4D8143FA1BD86524006121AA /* Semaphore.swift in Sources */,
+				4D8143F91BD86524006121AA /* Mutex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8143DE1BD8650B006121AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8143FF1BD86539006121AA /* RacerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D8143E51BD8650B006121AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D8143D71BD8650B006121AA /* Racer */;
+			targetProxy = 4D8143E41BD8650B006121AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4D8143EA1BD8650B006121AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4D8143EB1BD8650B006121AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D8143ED1BD8650B006121AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Racer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Racer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D8143EE1BD8650B006121AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Racer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Racer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4D8143F01BD8650B006121AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.RacerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D8143F11BD8650B006121AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.RacerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D8143D21BD8650B006121AA /* Build configuration list for PBXProject "Racer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8143EA1BD8650B006121AA /* Debug */,
+				4D8143EB1BD8650B006121AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8143EC1BD8650B006121AA /* Build configuration list for PBXNativeTarget "Racer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8143ED1BD8650B006121AA /* Debug */,
+				4D8143EE1BD8650B006121AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4D8143EF1BD8650B006121AA /* Build configuration list for PBXNativeTarget "RacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8143F01BD8650B006121AA /* Debug */,
+				4D8143F11BD8650B006121AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D8143CF1BD8650B006121AA /* Project object */;
+}
