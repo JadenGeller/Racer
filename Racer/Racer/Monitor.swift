@@ -20,7 +20,7 @@ public class Monitor<Element> {
         self.backing = value
     }
     
-    private func acquire<ReturnValue>(block: inout Element -> ReturnValue) -> ReturnValue {
+    public func acquire<ReturnValue>(block: inout Element -> ReturnValue) -> ReturnValue {
         return mutex.acquire {
             return block(&self.backing)
         }
@@ -33,7 +33,7 @@ public class Monitor<Element> {
     Parameter a: The thread-safe value to be operate on.
     Parameter block: The block that takes in the value and potentially reads or mutates it.
 */
-func acquire<A, ReturnValue>(a: Monitor<A>, block: (inout A) -> ReturnValue) -> ReturnValue {
+public func acquire<A, ReturnValue>(a: Monitor<A>, block: (inout A) -> ReturnValue) -> ReturnValue {
     return a.acquire { (inout a: A) in
         block(&a)
     }
@@ -46,7 +46,7 @@ func acquire<A, ReturnValue>(a: Monitor<A>, block: (inout A) -> ReturnValue) -> 
     Parameter b: A thread-safe value to be operate on.
     Parameter block: The block that takes in the value and potentially reads or mutates it.
 */
-func acquire<A, B, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, block: (inout A, inout B) -> ReturnValue) -> ReturnValue {
+public func acquire<A, B, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, block: (inout A, inout B) -> ReturnValue) -> ReturnValue {
     return a.acquire { (inout a: A) in
         b.acquire { (inout b: B) in
             block(&a, &b)
@@ -62,7 +62,7 @@ func acquire<A, B, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, block: (inout A,
     Parameter c: A thread-safe value to be operate on.
     Parameter block: The block that takes in the value and potentially reads or mutates it.
 */
-func multiple<A, B, C, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, block: (inout A, inout B, inout C) -> ReturnValue) -> ReturnValue {
+public func multiple<A, B, C, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, block: (inout A, inout B, inout C) -> ReturnValue) -> ReturnValue {
     return a.acquire { (inout a: A) in
         b.acquire { (inout b: B) in
             c.acquire { (inout c: C) in
@@ -81,7 +81,7 @@ func multiple<A, B, C, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor
     Parameter d: A thread-safe value to be operate on.
     Parameter block: The block that takes in the value and potentially reads or mutates it.
 */
-func multiple<A, B, C, D, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, _ d: Monitor<D>, block: (inout A, inout B, inout C, inout D) -> ReturnValue) -> ReturnValue {
+public func multiple<A, B, C, D, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, _ d: Monitor<D>, block: (inout A, inout B, inout C, inout D) -> ReturnValue) -> ReturnValue {
     return a.acquire { (inout a: A) in
         b.acquire { (inout b: B) in
             c.acquire { (inout c: C) in
@@ -103,7 +103,7 @@ func multiple<A, B, C, D, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Moni
     Parameter e: A thread-safe value to be operate on.
     Parameter block: The block that takes in the value and potentially reads or mutates it.
 */
-func multiple<A, B, C, D, E, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, _ d: Monitor<D>, _ e: Monitor<E>, block: (inout A, inout B, inout C, inout D, inout E) -> ReturnValue) -> ReturnValue {
+public func multiple<A, B, C, D, E, ReturnValue>(a: Monitor<A>, _ b: Monitor<B>, _ c: Monitor<C>, _ d: Monitor<D>, _ e: Monitor<E>, block: (inout A, inout B, inout C, inout D, inout E) -> ReturnValue) -> ReturnValue {
     return a.acquire { (inout a: A) in
         b.acquire { (inout b: B) in
             c.acquire { (inout c: C) in

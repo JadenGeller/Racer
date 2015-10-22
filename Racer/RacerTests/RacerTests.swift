@@ -90,4 +90,14 @@ class RacerTests: XCTestCase {
         
         XCTAssertEqual(0, unique.localValue)
     }
+    
+    func testMonitor() {
+        let array = Monitor(bridgeFromValue: [])
+        
+        dispatch {
+            array.acquire { array in
+                
+            }
+        }
+    }
 }
