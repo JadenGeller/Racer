@@ -25,3 +25,15 @@ public class RecursiveMutex: MutexType {
 Our `ThreadLocal` variable `alreadyLocked` allows us to prevent locking the Mutex again if the acquire function is called again on this same thread. Without this, locking would cause a deadlike, and our program would halt.
 
 `ThreadLocal` values are a fully type safe alternative to `NSThread`s `threadDictionary`. Additionally, `ThreadLocal` values are much more lightweight in use---imagine if we had to use a dictionary just to encode that single boolean! 
+
+You might've noticed that Racer's mutex type doesn't have a lock function, but an `acquire` function. This is a much safer alternative in that you cannot forget to unlock afterwards. Everything inside the `acquire` block is protected.
+
+```swift
+let m = Mutex()
+
+m.acquire {
+    // This is all safe!
+}
+```
+
+If you're looking for a more versitile concurrency mechansim, `Semaphore` is a very light abstraction over `dispatch_semamphore_t`, and it can be used to implement a wide variety of new structures.
