@@ -23,3 +23,5 @@ public class RecursiveMutex: MutexType {
 ```
 
 Our `ThreadLocal` variable `alreadyLocked` allows us to prevent locking the Mutex again if the acquire function is called again on this same thread. Without this, locking would cause a deadlike, and our program would halt.
+
+`ThreadLocal` values are a fully type safe alternative to `NSThread`s `threadDictionary`. Additionally, `ThreadLocal` values are much more lightweight in use---imagine if we had to use a dictionary just to encode that single boolean! 
