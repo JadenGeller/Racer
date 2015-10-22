@@ -1,15 +1,15 @@
 //
-//  BouncerTests.swift
-//  BouncerTests
+//  RacerTests.swift
+//  RacerTests
 //
 //  Created by Jaden Geller on 10/21/15.
 //  Copyright © 2015 Jaden Geller. All rights reserved.
 //
 
 import XCTest
-@testable import Bouncer
+@testable import Racer
 
-class BouncerTests: XCTestCase {
+class RacerTests: XCTestCase {
     
     func testSemaphore() {
         let semaphore = Semaphore(value: 0)
