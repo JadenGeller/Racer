@@ -29,11 +29,20 @@ Our `ThreadLocal` variable `alreadyLocked` allows us to prevent locking the Mute
 You might've noticed that Racer's mutex type doesn't have a lock function, but an `acquire` function. This is a much safer alternative in that you cannot forget to unlock afterwards. Everything inside the `acquire` block is protected.
 
 ```swift
-let m = Mutex()
+let mutex = Mutex()
 
-m.acquire {
+mutex.acquire {
     // This is all safe!
 }
 ```
+
+Another similiar type, `Monitor`, wraps any type such that access is automatically protected.
+
+```swift
+let safeArray = Monitor(bridgeFromValue: [1, 2, 3])
+
+safeArray.acquire { array in
+    // Safetly modify array
+}
 
 If you're looking for a more versitile concurrency mechansim, `Semaphore` is a very light abstraction over `dispatch_semamphore_t`, and it can be used to implement a wide variety of new structures.
