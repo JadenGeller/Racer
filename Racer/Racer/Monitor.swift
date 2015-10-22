@@ -25,6 +25,12 @@ public class Monitor<Element> {
             return block(&self.backing)
         }
     }
+    
+    public func acquire() -> Element {
+        return mutex.acquire {
+            return self.backing
+        }
+    }
 }
 
 /**
