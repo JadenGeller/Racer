@@ -12,9 +12,9 @@ public protocol MutexType {
         For any given mutex, it is guarenteed that no two calls to `acquire` will happen
         at the same time regardless of what thread the call is made from.
     
-        Parameter block: The block to run while the mutex is acquired.
+        - Parameter block: The block to run while the mutex is acquired.
     
-        Returns: If the block returns some value, it will be propagated out of the function
+        - Returns: If the block returns some value, it will be propagated out of the function
         through this return value.
     */
     func acquire<ReturnValue>(block: () -> ReturnValue) -> ReturnValue
@@ -27,9 +27,9 @@ public class Mutex: MutexType {
     /**
         Acquires the mutex before executing the block and releases the mutex afterwards.
     
-        Parameter block: The block to run while the mutex is acquired.
+        - Parameter block: The block to run while the mutex is acquired.
     
-        Returns: If the block returns some value, it will be propagated out of the function
+        - Returns: If the block returns some value, it will be propagated out of the function
         through this return value.
     */
     public func acquire<ReturnValue>(block: () -> ReturnValue) -> ReturnValue {
@@ -48,10 +48,10 @@ public class RecursiveMutex: MutexType {
     /**
         Acquires the mutex before executing the block and releases the mutex afterwards.
     
-        Parameter block: The block to run while the mutex is acquired. This block is allowed to recurse,
+        - Parameter block: The block to run while the mutex is acquired. This block is allowed to recurse,
             or call another fuction that acquires the same mutex.
     
-        Returns: If the block returns some value, it will be propagated out of the function
+        - Returns: If the block returns some value, it will be propagated out of the function
         through this return value.
     */
     public func acquire<ReturnValue>(block: () -> ReturnValue) -> ReturnValue {
@@ -79,9 +79,9 @@ public class MutexGroup: MutexType {
     /**
         Acquires the group of mutexes before executing the block and releases the group afterwards.
     
-        Parameter block: The block to run while the mutexes are acquired.
+        - Parameter block: The block to run while the mutexes are acquired.
     
-        Returns: If the block returns some value, it will be propagated out of the function
+        - Returns: If the block returns some value, it will be propagated out of the function
         through this return value.
     */
     public func acquire<ReturnValue>(block: () -> ReturnValue) -> ReturnValue {

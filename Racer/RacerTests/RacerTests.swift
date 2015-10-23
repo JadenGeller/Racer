@@ -91,13 +91,30 @@ class RacerTests: XCTestCase {
         XCTAssertEqual(0, unique.localValue)
     }
     
-    func testMonitor() {
-        let array = Monitor(bridgeFromValue: [])
+    func testCancelableSemaphore() {
+        let s = CancelableSemaphore(value: 1)
+        var count = 0
+        let expectedCount = 5
         
-        dispatch {
-            array.acquire { array in
-                
+        wait { dispatch in
+            for _ in 0..<5 {
+                dispatch {
+                    do {
+                        try s.wait()
+                        print("Hooray")
+                    }
+                    catch {
+                        print("Boo")
+                    }
+                    count++
+                }
             }
+            
+            usleep(50)
+            s.cancel()
         }
+        
+        XCTAssertEqual(expectedCount, count)
     }
 }
+
