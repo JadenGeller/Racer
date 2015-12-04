@@ -13,7 +13,14 @@ import Dispatch
 
     - Parameter block: The block to execute.
 */
-let dispatch = Queue.global.dispatch
+public let dispatch = Queue.global.dispatch
+
+/**
+    Execute closure synchronously on a background thread.
+
+    - Parameter block: The block to execute.
+*/
+public let dispatchSync = Queue.global.dispatchSync
 
 /**
     Execute closure asynchronously on a background thread, but first
@@ -22,7 +29,7 @@ let dispatch = Queue.global.dispatch
 
     - Parameter block: The block to execute.
 */
-let barrier = Queue.main.barrier
+public let barrier = Queue.main.barrier
 
 /// A queue that allows for ascnchronous execution of blocks.
 public class Queue {
@@ -66,13 +73,26 @@ public class Queue {
     }
     
     /**
+        Execute closure block synchronously.
+     
+        - Parameter block: The block to execute.
+     */
+    public func dispatchSync(block: () -> ()) {
+        dispatch_sync(backing, block)
+    }
+    
+    /**
         Execute closure aynchronously, but first wait for all other blocks
         submitted to the queue before it to complete and make all blocks submitted
         after it wait.
     
         - Parameter block: The block to execute.
     */
-    public func barrier(block: () -> ()) {
-        dispatch_barrier_async(backing, block)
+    public func barrier(isSynchronous isSynchronous: Bool = false, block: () -> ()) {
+        if isSynchronous {
+            dispatch_barrier_sync(backing, block)
+        } else {
+            dispatch_barrier_async(backing, block)
+        }
     }
 }

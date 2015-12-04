@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D08986C1BD9D62D00C7AE47 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08986B1BD9D62D00C7AE47 /* Queue.swift */; settings = {ASSET_TAGS = (); }; };
-		4D8143E31BD8650B006121AA /* Racer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8143D81BD8650B006121AA /* Racer.framework */; settings = {ASSET_TAGS = (); }; };
-		4D8143F81BD86524006121AA /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F31BD86524006121AA /* Locker.swift */; settings = {ASSET_TAGS = (); }; };
-		4D8143F91BD86524006121AA /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F41BD86524006121AA /* Mutex.swift */; settings = {ASSET_TAGS = (); }; };
-		4D8143FA1BD86524006121AA /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F51BD86524006121AA /* Semaphore.swift */; settings = {ASSET_TAGS = (); }; };
-		4D8143FB1BD86524006121AA /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F61BD86524006121AA /* ThreadLocal.swift */; settings = {ASSET_TAGS = (); }; };
-		4D8143FF1BD86539006121AA /* RacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143FE1BD86539006121AA /* RacerTests.swift */; settings = {ASSET_TAGS = (); }; };
-		4D973A961BD8A464006CE90C /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D973A951BD8A464006CE90C /* Wait.swift */; settings = {ASSET_TAGS = (); }; };
+		4D08986C1BD9D62D00C7AE47 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08986B1BD9D62D00C7AE47 /* Queue.swift */; };
+		4D3693651C116DA7005F76D6 /* ThreadSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3693641C116DA7005F76D6 /* ThreadSpecific.swift */; };
+		4D8143E31BD8650B006121AA /* Racer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8143D81BD8650B006121AA /* Racer.framework */; };
+		4D8143F81BD86524006121AA /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F31BD86524006121AA /* Locker.swift */; };
+		4D8143F91BD86524006121AA /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F41BD86524006121AA /* Mutex.swift */; };
+		4D8143FA1BD86524006121AA /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F51BD86524006121AA /* Semaphore.swift */; };
+		4D8143FB1BD86524006121AA /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143F61BD86524006121AA /* ThreadLocal.swift */; };
+		4D8143FF1BD86539006121AA /* RacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8143FE1BD86539006121AA /* RacerTests.swift */; };
+		4D973A961BD8A464006CE90C /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D973A951BD8A464006CE90C /* Wait.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		4D08986B1BD9D62D00C7AE47 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		4D3693641C116DA7005F76D6 /* ThreadSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadSpecific.swift; sourceTree = "<group>"; };
 		4D8143D81BD8650B006121AA /* Racer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Racer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8143DD1BD8650B006121AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D8143E21BD8650B006121AA /* RacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				4D8143F61BD86524006121AA /* ThreadLocal.swift */,
 				4D973A951BD8A464006CE90C /* Wait.swift */,
 				4D08986B1BD9D62D00C7AE47 /* Queue.swift */,
+				4D3693641C116DA7005F76D6 /* ThreadSpecific.swift */,
 				4D8143DD1BD8650B006121AA /* Info.plist */,
 			);
 			path = Racer;
@@ -212,6 +215,7 @@
 				4D8143F81BD86524006121AA /* Locker.swift in Sources */,
 				4D08986C1BD9D62D00C7AE47 /* Queue.swift in Sources */,
 				4D8143FB1BD86524006121AA /* ThreadLocal.swift in Sources */,
+				4D3693651C116DA7005F76D6 /* ThreadSpecific.swift in Sources */,
 				4D8143FA1BD86524006121AA /* Semaphore.swift in Sources */,
 				4D8143F91BD86524006121AA /* Mutex.swift in Sources */,
 			);

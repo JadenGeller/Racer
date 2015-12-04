@@ -116,5 +116,20 @@ class RacerTests: XCTestCase {
         
         XCTAssertEqual(expectedCount, count)
     }
+    
+    func testThreadSpecific() {
+        var threadIdentifier = ThreadSpecific { pthread_self() }
+        
+        let savedCurrentThreadIdentifier = pthread_self()
+        var savedDisptchThreadIdentifier: pthread_t!
+        wait { dispatch in
+            dispatch {
+                savedDisptchThreadIdentifier = threadIdentifier.value
+            }
+        }
+        
+        XCTAssertEqual(savedCurrentThreadIdentifier, threadIdentifier.value)
+        XCTAssertNotEqual(savedDisptchThreadIdentifier, threadIdentifier.value)
+    }
 }
 

@@ -48,7 +48,7 @@ public class Semaphore {
     
 }
 
-struct CancelableSemaphoreError: ErrorType {
+public struct CancelableSemaphoreError: ErrorType {
     let description = "Semaphore canceled"
 }
 
