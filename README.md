@@ -1,6 +1,6 @@
 # Racer
 
-Racer is a Swift framework the provides powerful, easy-to-use concurrent synchronization primitives such as `Monitor`, `Muxtex`, and `Semaphore`. Racer also provides type-safe thread-local storage that's super easy to use.
+Racer is a Swift framework the provides powerful, easy-to-use concurrent synchronization primitives such as `Locker`, `Muxtex`, and `Semaphore`. Racer also provides type-safe thread-local storage that's super easy to use.
 
 For example, here's how thread-local storage can be used to implement Racer's `RecursiveMutex`:
 ```swift
@@ -36,10 +36,10 @@ mutex.acquire {
 }
 ```
 
-Another similiar type, `Monitor`, wraps any type such that access is automatically protected.
+Another similiar type, `Locker`, wraps any type such that access is automatically protected.
 
 ```swift
-let safeArray = Monitor(bridgeFromValue: [1, 2, 3])
+let safeArray = Locker(bridgeFromValue: [1, 2, 3])
 
 safeArray.acquire { array in
     // Safetly modify array
