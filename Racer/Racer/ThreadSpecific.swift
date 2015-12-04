@@ -27,6 +27,7 @@ private struct Recomputable<Value> {
 }
 
 /// A value that, after traversing thread boundries, must be recomputed (on access).
+/// Note that `ThreadSpecific` does not provide any `Locker`-like concurrency support.
 public struct ThreadSpecific<Value> {
     private var threadId = pthread_self()
     private var backing: Recomputable<Value>
